@@ -46,6 +46,7 @@ set(SERVER_LIB_SRCS
     server_decoration_palette_interface.cpp
     shell_interface.cpp
     surface_interface.cpp
+    surfacerole.cpp
     subcompositor_interface.cpp
     touch_interface.cpp
     textinput_interface.cpp

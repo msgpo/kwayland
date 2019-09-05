@@ -33,6 +33,7 @@ namespace Server
 {
 
 class IdleInhibitorInterface;
+class SurfaceRole;
 
 class SurfaceInterface::Private : public Resource::Private
 {
@@ -84,6 +85,8 @@ public:
 
     void commitSubSurface();
     void commit();
+
+    SurfaceRole *role = nullptr;
 
     State current;
     State pending;
