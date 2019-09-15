@@ -513,6 +513,7 @@ void SurfaceInterface::Private::swapStates(State *source, State *target, bool em
 void SurfaceInterface::Private::commit()
 {
     Q_Q(SurfaceInterface);
+    emit q->aboutToBeCommitted();
     if (!subSurface.isNull() && subSurface->isSynchronized()) {
         swapStates(&pending, &subSurfacePending, false);
     } else {

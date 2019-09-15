@@ -359,9 +359,19 @@ Q_SIGNALS:
      *
      * This signal is emitted after all the relevant damage and xyzChanged signals
      * for this commit are emitted.
+     * @see aboutToBeCommitted
      * @since 5.54
      **/
     void committed();
+
+    /**
+     * Emitted when the Surface is about to be committed, i.e. before all pending
+     * state is applied.
+     *
+     * @see committed
+     * @since 5.XX
+     */
+    void aboutToBeCommitted();
 
 private:
     friend class CompositorInterface;
